@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/uikit.css">
+</head>
+
+<body style="font-family: Arial, Tahoma, sans-serif">
+
+    {% include 'naviagtion.html.jinja' %}
+
+    <main class="uk-container uk-container-expand">
+        <div class="uk-container uk-container-expand uk-margin">
+            {% block breadcrumps %} {% endblock %}
+        </div>
+        <div class="content" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 50">
+            <div>
+                {% block content %}{% endblock %}
+            </div>
+    </main>
+    <footer class="uk-container uk-container-expand uk-margin-top uk-background-muted">
+        <div class="uk-margin-top">
+            <p>
+               telegram bot message from web form
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
+</body>
+
+</html>

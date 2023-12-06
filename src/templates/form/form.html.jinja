@@ -1,0 +1,32 @@
+{% extends 'base.html.jinja' %}
+{% block title %}
+    form
+{% endblock %}
+
+{% block content %}
+
+<div class="uk-cover-container uk-background-cover uk-flex uk-flex-center uk-flex-middle uk-height-viewport">
+    <div class="uk-align-center uk-text-center" style="margin-top: -170px;">
+
+        <h1>form</h1>
+
+        <form class="form-message" style="width: 500px;">
+
+            <div class="uk-margin">
+                <textarea id="bot-message" class="uk-textarea" rows="5" placeholder="message" aria-label="Textarea"></textarea>
+            </div>
+
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary">Отправить</button>
+            </div>
+
+        </form>
+
+        <div class="block-result-message"></div>
+        <script src="/static/js/send_form.js"></script>
+
+    </div>
+</div>
+
+
+{% endblock %}
